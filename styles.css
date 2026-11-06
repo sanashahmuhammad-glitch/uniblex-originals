@@ -18,4 +18,5 @@
 .embed .board{width:min(100%,calc(100dvh - 130px),490px)}
 .embed .board-and-side .board{flex:0 0 auto;height:auto}
 .embed .board-wrap{padding:50px 14px!important}
+.card-art video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#090f1e;opacity:0;transition:opacity .2s}.game-card.is-previewing video{opacity:1}.card-art .card-monogram,.card-art .card-play{z-index:1}
 @media(max-width:560px){.embed .landscape .game-hud,.embed .landscape .game-footer>span{display:none}.embed .landscape .game-footer{right:5px;left:auto;bottom:5px;min-height:0;padding:0;background:none;backdrop-filter:none}.embed .landscape .touch-controls button{min-width:40px;min-height:40px;font-size:18px}.embed .board-wrap{padding:44px 10px!important}}

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "serve": "node server.cjs",
-    "check": "node --check app.js && node --check action.js && node --check puzzles.js && node --check tactics.js && node --check gallery.js && node --check games.js",
+    "check": "node --check app.js && node --check action.js && node --check puzzles.js && node --check tactics.js && node --check gallery.js && node --check games.js && node --check catalog.mjs && node --check publish-catalog.mjs",
     "qa": "node tests/qa.mjs",
     "qa:gallery": "node tests/gallery.mjs",
     "qa:embed": "node tests/embed.mjs",

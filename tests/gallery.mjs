@@ -13,6 +13,12 @@ for (const width of [390, 1280]) {
   }
   assert.equal(await page.locator(".card-art img").evaluateAll((images) => images.filter((image) => !image.complete || !image.naturalWidth).length), 0, "all original covers must load");
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, "gallery must fit viewport");
+  if (width === 1280) {
+    await page.locator(".game-card").first().hover();
+    await page.locator(".game-card.is-previewing").first().waitFor();
+    assert.ok(await page.locator(".game-card video").first().evaluate((video) => video.videoWidth > 0));
+    await page.mouse.move(0, 0);
+  }
   assert.deepEqual(errors, []);
   await page.screenshot({ path: `qa/gallery-${width}.png`, fullPage: true });
   console.log(`PASS gallery ${width}px`);
