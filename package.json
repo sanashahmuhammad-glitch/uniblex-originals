@@ -9,6 +9,7 @@
     "qa": "node tests/qa.mjs",
     "qa:gallery": "node tests/gallery.mjs",
     "qa:embed": "node tests/embed.mjs",
+    "qa:rhythm": "node tests/rhythm.mjs",
     "capture:previews": "node tests/previews.mjs"
   },
   "devDependencies": {

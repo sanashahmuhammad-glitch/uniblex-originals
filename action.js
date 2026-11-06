@@ -181,7 +181,7 @@ export function createActionGame(api) {
     for (const o of objects) {
       o.x -= (365 + score * 2.5) * dt;
       if (!o.counted && o.x + o.w < player.x - 18) { o.counted = true; score++; api.tone(370 + score * 12, .035); if (score >= 30) end(true, "Thirty beats cleared. The path is yours!"); }
-      if (o.x < player.x + 22 && o.x + o.w > player.x - 22 && player.y + 22 > 430 - o.h && player.y < 430) { end(false, `You cleared ${score} beats. Try the rhythm again.`); return; }
+      if (o.x < player.x + 22 && o.x + o.w > player.x - 22 && player.y + 22 > 430 - o.h && player.y - 22 < 430) { end(false, `You cleared ${score} beats. Try the rhythm again.`); return; }
     }
     objects = objects.filter((o) => o.x > -60);
   }
